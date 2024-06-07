@@ -1,0 +1,10 @@
+Cython==0.29.32
+protobuf==4.23.3
+pynput==1.7.6
+pyobjc-core==9.0
+pyobjc-framework-ApplicationServices==9.0
+pyobjc-framework-Cocoa==9.0
+pyobjc-framework-Quartz==9.0
+PyYAML==6.0
+screeninfo==0.8.1
+six==1.16.0

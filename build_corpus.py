@@ -26,8 +26,10 @@ transliterators = {
     'ta_en': ta_en_transliterator.transliterate,
 }
 
+
 def output_filename(filename):
     return '%s_out.txt' % (filename.split('.txt')[0])
+
 
 def needs_translation(corpus_path, filename):
     if filename.endswith('_out.txt'):
@@ -47,6 +49,7 @@ def needs_translation(corpus_path, filename):
 
     return False 
 
+
 def get_transliterator(filename):
     if filename.startswith("en_"):
         return transliterators['en_ta']
@@ -54,6 +57,7 @@ def get_transliterator(filename):
         return transliterators['ta_en']
     else:
         return None
+
 
 def main(corpus_path):
     filenames = os.listdir(corpus_path)
@@ -69,6 +73,7 @@ def main(corpus_path):
                     out_filename = output_filename(filename)
                     with codecs.open(os.path.join(corpus_path, out_filename), 'w', "utf-8") as out_file:
                         out_file.write(transliterated_text)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Update transliteration corpus")
